@@ -1,0 +1,17 @@
+<div id="facets">
+	{{#facets}}
+	<h4>
+		<a data-fname="{{ fname }}" class="toggeable" href="#">{{fname}} ({{values.length}})</a>
+	</h4>
+	<ul>
+		{{#values}}
+		<li id="{{name}}">
+			<a href="#" class="selectable-facet"
+			   data-fname="{{ fname }}" data-parent="{{ parent }}" data-value="{{ name }}">
+			   {{name}} - {{count}}
+			</a>
+		</li>
+		{{/values}}
+	</ul>
+	{{/facets}}
+</div>
