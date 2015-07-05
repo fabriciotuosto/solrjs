@@ -1,8 +1,12 @@
 <div id="selected-facets">
-	<h4>Selected</h4>
-	<ul id="selected_facet_list">
-	{{#selected}}
-		<li id="selected_{{name}}_{{value}}"><a href="#" onclick="new RemoveFacet({ f : \'{{name}}\' , v :\'{{value}}\' })">{{name}} - {{value}}</a></li>
-	{{/selected}}
-	</ul>
+    <h4>Selected</h4>
+    <ul id="selected_facet_list">
+        {{#selected}}
+        <li id="selected_{{name}}_{{value}}">
+            <a href="#" onclick="new RemoveFacet({ f : '{{name}}' , v :'{{value}}' })">
+                {{name}} - {{value}}
+            </a>
+        </li>
+        {{/selected}}
+    </ul>
 </div>

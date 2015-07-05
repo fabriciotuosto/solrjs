@@ -1,20 +1,19 @@
-var View = require('./View.js');
+var View     = require('./View.js');
 var template = require('./header.html');
 
-
-var view = View('header',template);
-view.getSearchParams = function(){
-	return view.getDiv().find('#q').val();
+var view             = View('header', template);
+view.getSearchParams = function () {
+  return view.getDiv().find('#q').val();
 };
 
 function Header() {
-	view.render();
+  view.render();
 
-	return {
-		getparam : function(){
-			return {param: view.getSearchParams()};
-		}
-	};
+  return {
+    getParam: function () {
+      return view.getSearchParams() ;
+    }
+  };
 };
 
 module.exports = Header;
